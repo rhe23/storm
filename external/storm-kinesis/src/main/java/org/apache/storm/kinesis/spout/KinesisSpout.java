@@ -23,7 +23,7 @@ import java.util.Map;
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
-import org.apache.storm.topology.base.BaseRichSpout;
+import backtype.storm.topology.base.BaseRichSpout;
 
 public class KinesisSpout extends BaseRichSpout {
 
@@ -46,7 +46,7 @@ public class KinesisSpout extends BaseRichSpout {
     }
 
     @Override
-    public void open(Map<String, Object> conf, TopologyContext context, SpoutOutputCollector collector) {
+    public void open(Map conf, TopologyContext context, SpoutOutputCollector collector) {
         this.collector = collector;
         kinesisRecordsManager = new KinesisRecordsManager(kinesisConfig);
         kinesisRecordsManager.initialize(context.getThisTaskIndex(), context.getComponentTasks(context.getThisComponentId()).size());

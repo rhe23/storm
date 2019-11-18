@@ -19,7 +19,7 @@ package org.apache.storm.kinesis.spout.test;
 
 import com.amazonaws.services.kinesis.model.Record;
 import org.apache.storm.kinesis.spout.RecordToTupleMapper;
-import org.apache.storm.tuple.Fields;
+import backtype.storm.tuple.Fields;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

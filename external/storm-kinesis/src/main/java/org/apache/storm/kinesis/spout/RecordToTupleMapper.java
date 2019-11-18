@@ -22,7 +22,7 @@ import com.amazonaws.services.kinesis.model.Record;
 
 import java.util.List;
 
-import org.apache.storm.tuple.Fields;
+import backtype.storm.tuple.Fields;
 
 public interface RecordToTupleMapper {
     /**
